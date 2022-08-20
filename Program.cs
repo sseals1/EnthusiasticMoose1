@@ -19,7 +19,7 @@ void Main()
     // SecretQuestion();
     // invoking the function
 }
- 
+
 
 
 void Question()
@@ -54,7 +54,7 @@ void Question()
         MooseSays("You will...oh, yes, you will...");
     }
 
-      bool wantsSecret = MooseAsks("Do you want to know a secret?");
+    bool wantsSecret = MooseAsks("Do you want to know a secret?");
     if (wantsSecret)
     {
         MooseSays("ME TOO!!!! I love secrets...tell me one!");
@@ -68,36 +68,27 @@ void Question()
 
 
 
-
-
-
-
-
-  
-
-
-
-
-
 bool MooseAsks(string question)
-// this is the format for a c# function
+// this is the format for a c# function with the question/taco argument
 {
     Console.Write($"{question} (Y/N): ");
     // this line writes the question to the console
+
     string answer = Console.ReadLine().ToLower();
+    // while (true)
     // creates a string variable and assigns to it the value of the user input, 
     // changing input all to lower case with ToLower() method
 
     while (answer != "y" && answer != "n")
     // this function will continue to run until user inputs answer of y/n
     {
-        Console.Write($"{question} (Y/N): ");
+        // Console.Write($"{question} (Y/N): ");
         // this line prints the question string and the y/n answer option
         answer = Console.ReadLine().ToLower();
         // gets user input and changes it to lower case
     }
-
     if (answer == "y")
+
     // if 
     {
         return true;
